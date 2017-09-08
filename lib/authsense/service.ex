@@ -74,9 +74,9 @@ defmodule Authsense.Service do
 
     user = get_user(email, model)
     if user do
-      crypto.checkpw(password, Map.get(user, hashed_passwd)) && user
+      Comeonin.Pbkdf2.checkpw(password, Map.get(user, hashed_passwd)) && user
     else
-      crypto.dummy_checkpw
+      Comeonin.Pbkdf2.dummy_checkpw
     end
   end
 
