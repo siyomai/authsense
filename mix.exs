@@ -44,7 +44,8 @@ defmodule Authsense.Mixfile do
     [
       {:ecto, ">= 1.0.0"},
       {:plug, ">= 1.0.0"},
-      {:comeonin, ">= 2.4.0"},
+      {:comeonin, "~> 4.0"},
+      {:pbkdf2_elixir, "~> 0.12"},
       {:earmark, "~> 0.1", only: :dev},
       {:ex_doc, "~> 0.11", only: :dev},
       {:postgrex, "~> 0.11.2", only: :test}
